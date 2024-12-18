@@ -1,32 +1,31 @@
 <!DOCTYPE html>
-<head><title>Currency</title></head>
+<head>
+    <title>Currency</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
 <body>
-    <div id="wise-calc-widget">
-        <!-- calculator will be rendered here -->
-    </div>
-    <script>
-        (function() {
-      window.onload = function() {
-        /* Change the variables below */
-        var sourceCurrencyCode = "USD";
-        var targetCurrencyCode = "INR";
-        var sourceAmount = 1000;
-        var callToActionLabel = "Get started";
-        var hideCta = false;
-        var hideDetails = false;
-        var affiliateLink = "";
-        var lang = "en";
-        var width = "580px";
-        var height = "470px";
-        /* Do not modify the code below */
-        var redirectUrlParams = encodeURIComponent("https://wise.com/");
-        var redirectUrl = encodeURIComponent(affiliateLink + "?u=" + redirectUrlParams);
-        var wiseIframeUrl =
-          "https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=" + sourceCurrencyCode + "&targetCurrency=" + targetCurrencyCode;
-        var wiseIframe = document.createElement('iframe');wiseIframe.frameBorder = 0;wiseIframe.width = width;wiseIframe.height = height;wiseIframe.id = "wise-calc";wiseIframe.scrolling = "no";wiseIframe.setAttribute("allowtransparency", "true");wiseIframe.setAttribute("src", wiseIframeUrl);
-        document.getElementById("wise-calc-widget").appendChild(wiseIframe);
-      };
-    })();
-    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Interest Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="currency.html">Currency Converter</a>
+            </li>
+        </ul>
+    </nav>
+    <center>
+    <iframe
+        title="fx"
+        src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=USD&targetCurrency=INR"
+        height=490
+        width=340
+        frameBorder="0"
+        allowtransparency="true">
+    </iframe>
+    </center>
 </body>
 </html>
