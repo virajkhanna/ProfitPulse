@@ -10,7 +10,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Interest Calculator</a>
+              <a class="nav-link" href="#"><b>Interest Calculator</b></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="currency.html">Currency Converter</a>
@@ -21,27 +21,39 @@
         <br>
         <div class="container"><div class="typed-out"><h2><p class="green">ProfitLens</p> - your ultimate guide to the Financial World!</h2></div></div>
         <form onsubmit="return false;" style="margin-top: 30px;">
-            <label for="principal">Principal: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="principal">Principal (money put in!): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="number" id="principal"></input>
             <br>
-            <label for="roi">Rate of Interest (%): </label>
+            <label for="roi">Rate of Interest (amount of interest earned for one year, %): </label>
             <input type="number" id="roi"></input>
             <br>
-            <label for="time">Time (years): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label for="time">Time (years!): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
             <input type="number" id="time"></input>
             <br>
-            <select class="form-select mt-3" style="width: 25% !important;" id="type">
-                <option>Simple Interest</option>
-                <option>Compound Interest</option>
-            </select>   
             <br>
             <button onclick="calculate();" class="btn btn-primary">Calculate interest!</button>
         </form>
         <br>
-        <h4 id="interest-final">Interest: </h4>
-        <p class="text1">If you wanted to <span class="double">Double</span> your money, it would take <span id="doublefill"></span> years</p>
-        <p class="text2">If you wanted to <span class="triple">Triple</span> your money, it would take <span id="triplefill"></span> years</p>
-        <p class="text3">If you wanted to <span class="quadruple">Quadruple</span> your money, it would take <span id="quadruplefill"></span> years</p>
+        <table class="compare1" id="compare">
+            <th><h1>Simple Interest</h1></th>
+            <th></th>
+            <th><h1>Compound Interest</h1></th>
+            <tr>
+                <td>
+                <h4 id="interest-final-simple">Interest: </h4>
+                <p class="text1">If you wanted to <span class="double">Double (2x)</span> your money, it would take <span id="doublefill-simple"></span> years</p>
+                <p class="text2">If you wanted to <span class="triple">Triple (3x)</span> your money, it would take <span id="triplefill-simple"></span> years</p>
+                <p class="text3">If you wanted to <span class="quadruple">Quadruple (4x)</span> your money, it would take <span id="quadruplefill-simple"></span> years</p>
+                </td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>
+                <h4 id="interest-final">Interest: </h4>
+                <p class="text1">If you wanted to <span class="double">Double (2x)</span> your money, it would take <span id="doublefill"></span> years</p>
+                <p class="text2">If you wanted to <span class="triple">Triple (3x)</span> your money, it would take <span id="triplefill"></span> years</p>
+                <p class="text3">If you wanted to <span class="quadruple">Quadruple (4x)</span> your money, it would take <span id="quadruplefill"></span> years</p>
+                </td>
+            </tr>    
+    </table>
     </center>
 </body>
 </html>
