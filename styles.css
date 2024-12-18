@@ -37,3 +37,8 @@
     background-color: green;
     color: white;
 }
+
+.compare1 {
+    text-align: center;
+    display: none;
+}
