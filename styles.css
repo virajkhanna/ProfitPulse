@@ -1,3 +1,7 @@
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("background.png");
+}
+
 .double {
     color: blue;
 }
@@ -16,6 +20,10 @@
 
 .container {
     display: inline-block;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Georgia";
 }
 
 .typed-out {
@@ -40,5 +48,8 @@
 
 .compare1 {
     text-align: center;
-    display: none;
+}
+
+a {
+    font-size: 18px !important;
 }
