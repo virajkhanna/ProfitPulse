@@ -37,21 +37,13 @@ function calculate() {
     var interest = document.getElementById("roi").value;
     var time = document.getElementById("time").value;
 
-    var type = document.getElementById("type").value;
-
-    if (type == "Compound Interest") {
-        document.getElementById("interest-final").innerHTML = "Interest: " + compound(principal, interest, time).toFixed(3);
-        document.getElementById("doublefill").innerHTML = doublecompound(interest).toFixed(3);
-        document.getElementById("triplefill").innerHTML = triplecompound(interest).toFixed(3);
-        document.getElementById("quadruplefill").innerHTML = quadruplecompound(interest).toFixed(3);
-    } else {
-        document.getElementById("interest-final").innerHTML = "Interest: " + simple(principal, interest, time).toFixed(3);
-        document.getElementById("doublefill").innerHTML = doublesimple(interest).toFixed(3);
-        document.getElementById("triplefill").innerHTML = triplesimple(interest).toFixed(3);
-        document.getElementById("quadruplefill").innerHTML = quadruplesimple(interest).toFixed(3);
-    }
-
-    document.querySelector(".text1").removeProperty("display");
-    document.querySelector(".text2").removeProperty("display");
-    document.querySelector(".text3").removeProperty("display");
+    document.getElementById("interest-final").innerHTML = "Interest: " + compound(principal, interest, time).toFixed(2);
+    document.getElementById("doublefill").innerHTML = doublecompound(interest).toFixed(1);
+    document.getElementById("triplefill").innerHTML = triplecompound(interest).toFixed(1);
+    document.getElementById("quadruplefill").innerHTML = quadruplecompound(interest).toFixed(1);
+    document.getElementById("interest-final-simple").innerHTML = "Interest: " + simple(principal, interest, time).toFixed(2);
+    document.getElementById("doublefill-simple").innerHTML = doublesimple(interest).toFixed(1);
+    document.getElementById("triplefill-simple").innerHTML = triplesimple(interest).toFixed(1);
+    document.getElementById("quadruplefill-simple").innerHTML = quadruplesimple(interest).toFixed(1);
+    document.getElementById("compare").classList.remove('compare1');
 }
