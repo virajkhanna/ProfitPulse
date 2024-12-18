@@ -37,13 +37,24 @@ function calculate() {
     var interest = document.getElementById("roi").value;
     var time = document.getElementById("time").value;
 
-    document.getElementById("interest-final").innerHTML = "Interest: " + compound(principal, interest, time).toFixed(2);
+    if (time > 1) {
+        document.getElementById("interest-final").innerHTML = "Interest: " + compound(principal, interest, time).toFixed(2) + " (in " + time + " years)";
+    } else {
+        document.getElementById("interest-final").innerHTML = "Interest: " + compound(principal, interest, time).toFixed(2) + " (in " + time + " year)";
+    }
+
     document.getElementById("doublefill").innerHTML = doublecompound(interest).toFixed(1);
     document.getElementById("triplefill").innerHTML = triplecompound(interest).toFixed(1);
     document.getElementById("quadruplefill").innerHTML = quadruplecompound(interest).toFixed(1);
-    document.getElementById("interest-final-simple").innerHTML = "Interest: " + simple(principal, interest, time).toFixed(2);
+    
+    if (time > 1) {
+        document.getElementById("interest-final-simple").innerHTML = "Interest: " + simple(principal, interest, time).toFixed(2) + " (in " + time + " years)";
+    } else {
+        document.getElementById("interest-final-simple").innerHTML = "Interest: " + simple(principal, interest, time).toFixed(2) + " (in " + time + " year)";
+    }
+
     document.getElementById("doublefill-simple").innerHTML = doublesimple(interest).toFixed(1);
     document.getElementById("triplefill-simple").innerHTML = triplesimple(interest).toFixed(1);
     document.getElementById("quadruplefill-simple").innerHTML = quadruplesimple(interest).toFixed(1);
-    document.getElementById("compare").classList.remove('compare1');
+    // document.getElementById("compare").classList.remove('compare1');
 }
