@@ -1,0 +1,39 @@
+.double {
+    color: blue;
+}
+
+.triple {
+    color: green;
+}
+
+.quadruple {
+    color: tomato;
+}
+
+.text1 .text2 .text3 { 
+    display: none;
+}
+
+.container {
+    display: inline-block;
+}
+
+.typed-out {
+    font-family: "Georgia";
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 4s steps(50, end) forwards;
+    font-size: 1.6rem;
+    width: 0;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.green {
+    display: inline;
+    background-color: green;
+    color: white;
+}

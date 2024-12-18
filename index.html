@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>ProfitLens - your ultimate guide to the Financial World!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Interest Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="currency.html">Currency Converter</a>
+            </li>
+        </ul>
+    </nav>
+    <center>
+        <br>
+        <div class="container"><div class="typed-out"><h2><p class="green">ProfitLens</p> - your ultimate guide to the Financial World!</h2></div></div>
+        <form onsubmit="return false;" style="margin-top: 30px;">
+            <label for="principal">Principal: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" id="principal"></input>
+            <br>
+            <label for="roi">Rate of Interest (%): </label>
+            <input type="number" id="roi"></input>
+            <br>
+            <label for="time">Time (years): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" id="time"></input>
+            <br>
+            <select class="form-select mt-3" style="width: 25% !important;" id="type">
+                <option>Simple Interest</option>
+                <option>Compound Interest</option>
+            </select>   
+            <br>
+            <button onclick="calculate();" class="btn btn-primary">Calculate interest!</button>
+        </form>
+        <br>
+        <h4 id="interest-final">Interest: </h4>
+        <p class="text1">If you wanted to <span class="double">Double</span> your money, it would take <span id="doublefill"></span> years</p>
+        <p class="text2">If you wanted to <span class="triple">Triple</span> your money, it would take <span id="triplefill"></span> years</p>
+        <p class="text3">If you wanted to <span class="quadruple">Quadruple</span> your money, it would take <span id="quadruplefill"></span> years</p>
+    </center>
+</body>
+</html>

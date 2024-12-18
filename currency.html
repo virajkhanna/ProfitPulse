@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head><title>Currency</title></head>
+<body>
+    <div id="wise-calc-widget">
+        <!-- calculator will be rendered here -->
+    </div>
+    <script>
+        (function() {
+      window.onload = function() {
+        /* Change the variables below */
+        var sourceCurrencyCode = "USD";
+        var targetCurrencyCode = "INR";
+        var sourceAmount = 1000;
+        var callToActionLabel = "Get started";
+        var hideCta = false;
+        var hideDetails = false;
+        var affiliateLink = "";
+        var lang = "en";
+        var width = "580px";
+        var height = "470px";
+        /* Do not modify the code below */
+        var redirectUrlParams = encodeURIComponent("https://wise.com/");
+        var redirectUrl = encodeURIComponent(affiliateLink + "?u=" + redirectUrlParams);
+        var wiseIframeUrl =
+          "https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=" + sourceCurrencyCode + "&targetCurrency=" + targetCurrencyCode;
+        var wiseIframe = document.createElement('iframe');wiseIframe.frameBorder = 0;wiseIframe.width = width;wiseIframe.height = height;wiseIframe.id = "wise-calc";wiseIframe.scrolling = "no";wiseIframe.setAttribute("allowtransparency", "true");wiseIframe.setAttribute("src", wiseIframeUrl);
+        document.getElementById("wise-calc-widget").appendChild(wiseIframe);
+      };
+    })();
+    </script>
+</body>
+</html>
